@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="spring.css"/> 
+
+			<script> 
+
+			if(sessionStorage.getItem('season') == 'spring'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="spring.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'summer'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="summer.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'fall'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="fall.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'winter'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="winter.css"/>');
+			}
+
+		 </script>
+
+		<title>Japan: Events</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
+</head>
+
+
+<body id = "body"> 
+
+	<div id = "mainText">
+				<h1> 日本へ行こう!</h1>
+				<h3> Let's go to Japan!</h3>
+				
+				<nav class = "navBar">
+
+					<ul>
+						<li><a href = "index.html"> Home </a></li>
+						<li><a href = "resources.html"> Resources </a></li>
+						<li><a href = "events.html" class = "selected"> Events </a></li>
+						<li><a href = "contact.html"> Contact </a></li>
+
+
+					</ul>
+				</nav>
+
+
+			<iframe id = "calendar" src="https://www.google.com/calendar/embed?src=smith.edu_mvt62eu62c20htqhhvp20ds7ns%40group.calendar.google.com&ctz=America/New_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+
+			<div class = "seasons">
+				<ul>
+					<li id = "spring"> Spring </li>
+					<li id = 'summer'> Summer </li>
+					<li id = 'fall'> Fall </li>
+					<li id = 'winter'> Winter </li>
+
+				</ul>
+			</div>
+
+
+
+	</div>
+
+
+	<script src="javascript.js"></script>
+
+</body>
+
+</html>

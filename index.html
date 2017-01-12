@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="spring.css"/> 
+	<head>
+		<script> 
+			if(sessionStorage.getItem('season') == 'spring'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="spring.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'summer'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="summer.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'fall'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="fall.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'winter'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="winter.css"/>');
+			}
+
+			var i = 0;
+			var path = new Array();
+			 
+			// LIST OF IMAGES
+			path[0] = "images/sweets.jpg";
+			path[1] = "images/bento.jpg";
+			path[2] = "images/dinner.jpg";
+			path[3] = "images/takoyaki.jpg";
+
+
+			function swapImage() {
+			    document.slide.src = path[i];
+			    if(i < path.length - 1) i++; else i = 0;
+			   		setTimeout("swapImage()",3000);
+			}
+
+			window.onload=swapImage;
+
+		</script>
+		<title>Japan: Home</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
+	</head>
+
+	<body = id= "body">
+		<div id = "mainText">
+			<h1> 日本へ行こう!</h1>
+			<h3> Let's go to Japan!</h3>
+
+			<nav class = "navBar">
+
+				<ul>
+					<li><a href = "index.html" class = "selected"> Home </a></li>
+					<li><a href = "resources.html"> Resources </a></li>
+					<li><a href = "events.html"> Events </a></li>
+					<li><a href = "contact.html"> Contact </a></li>
+
+				</ul>
+			</nav>
+			
+	
+
+			<img id = 'slideshow' height="400" width="auto" name="slide" src="images/sweets.jpg"  />
+
+
+			<p id = 'intro'> 
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ante orci, viverra feugiat pellentesque a, laoreet sit amet libero. Duis accumsan congue convallis. Nulla nisl orci, mattis a facilisis at, rhoncus quis velit. Nunc sit amet auctor purus, eget mollis tortor. Proin hendrerit pellentesque ligula nec porttitor. Donec rutrum, nisi vitae mattis fringilla, augue dolor fermentum nulla, vitae porttitor justo massa id eros. Nullam augue orci, luctus quis mauris at, lobortis pharetra.
+
+			</p>
+
+
+			<ul>
+				<li><a href = "designDoc.html">Design Document</a></li>
+			</ul>
+
+
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+		</br>
+
+			<div class = "seasons">
+				<ul>
+					<li id = "spring"> Spring </li>
+					<li id = 'summer'> Summer </li>
+					<li id = 'fall'> Fall </li>
+					<li id = 'winter'> Winter </li>
+
+				</ul>
+			</div>
+
+		</div>
+			
+		<script src="javascript.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,69 @@
+body {
+	background-image: url('images/city.jpg');
+	background-size: 100% auto;
+	background-attachment: fixed;
+}
+
+#introPage {
+	background: #FFE4E1;
+	opacity: 0.95; /* lets you see a little bit of the background image */
+	float: auto;
+	margin: 15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	padding-top: 5%; 
+	padding-bottom: 10%;
+}
+
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2%;
+	font-size: 400%;
+	padding-top: 0%;
+	font-weight: normal;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 400%;
+	text-transform: uppercase;
+	margin-top: -3%;
+}
+
+
+
+
+ul { /* for all unordered lists (navbar and seasons) */
+	list-style-type: none; /* removes bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+a {
+	display: inline-block; /* makes whole area clickable, not just text */
+	width: 15%;
+	font-family: 'Amatic SC', cursive;
+	font-size: 175%;
+	text-align: center;
+	text-decoration: none; /* gets rid of link look */
+	text-transform: uppercase;
+	background-color: pink;
+	padding: 10px;
+	color: black;
+
+}
+
+
+li { /* for all list elements, to make horizontal line */
+	display: inline;
+	font-size: 125%;
+}
+
+a:hover {
+	background-color: #FF9F95;
+}

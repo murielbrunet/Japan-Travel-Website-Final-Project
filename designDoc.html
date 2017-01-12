@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="spring.css"/> 
+	<head>
+		<script> 
+			if(sessionStorage.getItem('season') == 'spring'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="spring.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'summer'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="summer.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'fall'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="fall.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'winter'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="winter.css"/>');
+			}
+
+			
+		</script>
+		<title>Japan: Design Document</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
+	</head>
+
+	<body = id= "body">
+		<div id = "mainText">
+			<h1> 日本へ行こう!</h1>
+			<h3> Let's go to Japan!</h3>
+
+			<nav class = "navBar">
+
+				<ul>
+					<li><a href = "index.html" class = "selected"> Home </a></li>
+					<li><a href = "resources.html"> Resources </a></li>
+					<li><a href = "events.html"> Events </a></li>
+					<li><a href = "contact.html"> Contact </a></li>
+
+				</ul>
+			</nav>
+
+			<p id = 'name'>
+				Muriel Brunet </br> Spring 2015 </br> 
+			</p>
+			
+			</br>
+			</br>
+			</br>
+			</br>
+</br></br></br></br></br></br>
+			<p class = 'designTitles'><b>Major Design Goals</b> </p>
+
+			<p class = "designDoc"> 
+My main goal in creating this website was to create a space in which all the different resources on Japan could be collected. Japan is very centered around seasons in a variety of ways so I thought it would make the most sense with the theme to create different skins, each one corresponding to a season. There is an entry page before the homepage of the website to ask the user to pick a season. The home page showcases a variety of photographs, which would eventually link to resources on the resource page. The resource page is made to show a variety of different links and useful information. Right now, it showcases two Japanese life vloggers, with a popular video imbedded into the website and a link to their YouTube channel. The Events page holds a calendar to allow users to get to know which events are coming up. Finally, the Contact page holds a form to allow users to sign up for a newsletter. Overall, the website is rather straightforward as it is made up of four pages, all laid out in the same way. What makes this website somewhat different from others is its use of images and colors to create the look and feel of the four different seasons of Japan. </br> </br>I made use a variety of resources to complete this project. I edited my code on Sublime Text 2. Furthermore, I use W3Schools a lot for reference on how to create links, use buttons, have javascript events, and the like. I also made great use of Color Hex, a website that shows a huge variety of colors and their hex numbers, which made it easier for me to create my themes. Finally, I also made use of Google Help to find out how to imbed YouTube and Google Calendar into my website.  </br> </br>I tried to use percentages as much as possible in order to accommodate for varied browser sizes. Lastly, this website works on both Safari and Chrome, though I was unable to test it on Firefox as I do not have ready access to that browser. 
+			</p>
+
+
+			<p class = 'designTitles'><b>Forms</b> </p>
+
+			<p class = "designDoc"> 
+I used forms to get users to sign up for a newsletter. The form asked for a variety of personal details, which I then store on a procform.html page.is website somewhat different from others is its use of images and colors to create the look and feel of the four different seasons of Japan.
+			</p>
+
+
+			<p class = 'designTitles'><b>Storage</b> </p>
+
+			<p class = "designDoc"> 
+ I used session storage to keep track of the theme chosen by the user. In this way, the user could choose a theme upon entering the website and then have the theme remain the same throughout their use of the site. They also had the option of changing the theme by clicking on a navbar at the bottom of the page. I used session storage so that the user would have to choose a new theme every time they visited the website. The default theme, in case the user doesn't enter the site through the intro page, is set to spring.
+			</p>
+
+
+			<p class = 'designTitles'><b>Interaction</b> </p>
+
+			<p class = "designDoc"> 
+ There is a variety of interaction throughout the website. The navbar options change colors once the user scrolls over the options to let the user know that these are clickable. This is especially useful for the theme navbar at the bottom of the page because the themes are not links, so the hover is all the more important in letting the user know that they are clickable any way. The themes are actually just a set of four different css pages that are changed depending on the value stored under 'season' in the session storage. The appropriate css file is chosen at the load time of each page. There is also added interactivity through clickable images in the resources page as well as a calendar that people can interact with the understand the variety of events coming up in the near future. Furthermore, the example information within the form disappears when the user clicks it to fill it out. This was done use javascript and examples from class. 
+			</p>
+
+			<p class = 'designTitles'><b>User Feedback</b> </p>
+
+			<p class = "designDoc"> 
+ The main user feedback employed is the theme. By getting the user to choose a theme, they can customize their experience of the website. There is also some user feedback with the submission of the form, which allows the user to see that they submitted the correct data before returning the the home page. 
+			</p>
+
+
+			<p class = 'designTitles'><b>Multimedia</b> </p>
+
+			<p class = "designDoc"> 
+There is a variety of multimedia used. I used photos as the background of the website as well as embedded some YouTube videos to show examples of Japanese vloggers. I also added an embedded Google calendar to display various events happening in relation to Japan that might be of interest to the user.  
+			</p>
+
+			<p class = 'designTitles'><b>Elements from Project 1</b> </p>
+
+			<p class = "designDoc"> 
+This project incorporates all the design elements from project1 as well. I used several different style sheets to create the themes. I also have a navigation aid, with the current page in a different color to aid the user in knowing their location on the site. I make use of javascript in a variety of ways to aid in form use and completion the Contact Page as well as to save the theme in session storage. I also make use of links and images throughout my website, links primarily found on the Resources page. Finally, I have a structure layout with the layout of the page staying the same through the various pages visited with the same color theme remaining throughout and put to use in different ways depending on content.
+			</p>
+
+
+
+
+			<div class = "seasons">
+				<ul>
+					<li id = "spring"> Spring </li>
+					<li id = 'summer'> Summer </li>
+					<li id = 'fall'> Fall </li>
+					<li id = 'winter'> Winter </li>
+
+				</ul>
+			</div>
+
+		</div>
+			
+		<script src="javascript.js"></script>
+
+	</body>
+
+</html>

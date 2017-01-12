@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Form Processor</title>
+</head>
+<body>
+<h1>Let's go to Japan!</h1>
+<p>Your form has been saved as the following.</p>
+<a href = "index.html">Return to Homepage</a> </br>
+</br></br></br>
+<script>
+    // this function restores escaped characters and spaces
+    function restore(str) {
+    	return unescape(str.split('+').join(' '));
+    }
+
+    // location.search holds the first ? in the url and everything following.
+    results = location.search
+    // we must strip off the first ? character
+    results = results.substring(1,results.length)
+    // form items are split at & symbols
+    splitres = results.split('&')
+
+    if (results.length > 0) {
+      document.writeln('<table border="1">')
+      document.writeln('<tr><th>Form Element Name</th><th>Value</th></tr>')
+      // loop for each item
+      for (res in results.split('&')) {
+        one = splitres[res]
+    	  // split the current item at = symbol
+    	  onesplit = one.split('=')
+    	  // left of = is item name, right is value.
+    	  document.writeln('<tr><td>'+restore(onesplit[0])+'</td><td>'+restore(onesplit[1])+'</td></tr>')
+      }
+      document.writeln('</table>')
+    } else {
+      document.writeln('<p>There are currently no form results to process.</p>')
+    }
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,195 @@
+
+#body{
+	background-image: url('images/winter.jpg');
+	background-size: 100% auto;
+	background-attachment: fixed;
+
+}
+
+#mainText {
+	background: #B9DFF6;
+	opacity: 0.95; /* lets you see a little bit of the background image */
+	float: auto;
+	margin: 5%;
+}
+
+h1 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 400%;
+	padding-top: 3%;
+}
+
+h2 {
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 400%;
+	text-transform: uppercase;
+}
+
+h3 {
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 250%;
+	text-transform: uppercase;
+	padding-bottom: 2%;
+	margin-top: -3%;
+}
+
+p {
+	text-align: center;
+	padding: 10%;
+	padding-top: 5%;
+
+}
+
+#intro {
+	padding-top: 2%;
+	font-size: 150%;
+
+}
+
+ul { /* for all unordered lists (navbar and seasons) */
+	list-style-type: none; /* removes bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+}
+
+.navbar, a {
+	display: inline-block; /* makes whole area clickable, not just text */
+	width: 20%;
+	text-align: center;
+	font-family: 'Amatic SC', cursive;
+	font-size: 175%;
+	text-decoration: none; /* gets rid of link look */
+	text-transform: uppercase;
+	background-color: #8CCAF0;
+	padding: 10px;
+	color: black;
+	margin-top: -10px;
+
+}
+
+
+li { /* for all list elements, to make horizontal line */
+	display: inline;
+}
+
+.navbar, a:hover {
+	background-color: #5BB2E8;
+}
+
+
+.seasons ul { /* specifically for seasons */
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+}
+
+.seasons li {
+	font-family: 'Amatic SC', cursive;
+	font-size: 150%;
+	width: 100%;
+	text-transform: uppercase;
+	background-color: #8CCAF0;
+	padding: 10px;
+	color: black;
+}
+
+
+.seasons li:hover {
+	background-color: #5BB2E8;
+}
+
+
+.selected, #winter {
+	background-color: #76BFEC;
+}
+
+
+/* forms CSS */
+
+
+#newsLetterForm {
+
+	border: 5px inset #5BB2E8; /* hover color */
+	margin: 5%;
+	margin-right: auto;
+	margin-left: auto;
+	width: 5in; 
+	text-align: center;
+}
+
+#newsLetterForm h2 {
+	text-transform: uppercase;
+}
+
+#newsLetterForm button {
+	background: #5BB2E8; /* hover color */
+	font-size: 15px;
+}
+
+input {
+	color: #5BB2E8; /* hover color */
+}
+
+input:focus{
+	outline: #5BB2E8 solid 2px; /* hover color */
+}
+
+/* resources */
+
+
+.video {
+	float: left;
+	margin-right: 15px;
+}
+
+.youtubers {
+	background: none;
+	padding: 1%;
+}
+
+.youtubers a:hover {
+	background-color: none;
+}
+
+#calendar, #slideshow {
+	float: center;
+	margin: 0 auto;
+	display: block;
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+}
+
+#slideshow{
+	padding-bottom: 0;
+}
+
+.designDoc {
+	text-align: center; 
+	padding: 0;
+	margin: 10%;
+}
+
+
+.designTitles {
+	text-transform: uppercase;
+	font-size: 200%;
+	font-family: 'Amatic SC', cursive;
+	margin-bottom: -8%;
+	padding: 0;
+
+}
+
+#name {
+	text-transform: uppercase;
+	font-size: 300%;
+	font-weight: bold;
+	font-family: 'Amatic SC', cursive;
+	margin-bottom: -8%;
+	padding: 0;
+}

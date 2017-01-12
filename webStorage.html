@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="US-ASCII">
+<title>Storage Demo</title>
+</head>
+<body>
+
+	<form name="storageForm">
+		<p>
+			Key: <input type="text" name="key"><br> Value: <input type="text"
+				name="val"><br> StorageType: <select name="storageType">
+				<option value='localStorage'>localStorage</option>
+				<option value='sessionStorage'>sessionStorage</option>
+			</select> <input type="button" name="setKeyVal" value="Set Key/Value">
+		</p>
+		<p>
+			<input type="button" name="removeKey" value="Remove Key"> <input
+				type="button" name="clear" value="Clear">
+		</p>
+	</form>
+	<p>
+		<i>Reload page to see update variables below.</i>
+	</p>
+	<hr />
+	<script>
+		function storeKeyValue() {
+			var storageForm = document.forms["storageForm"];
+			var key = storageForm.key.value;
+			var value = storageForm.val.value;
+			if (storageForm.storageType.value == "sessionStorage") {
+				sessionStorage.setItem(key, value);
+			} else {
+				localStorage.setItem(key, value);
+			}
+		}
+
+		function removeKey() {
+			//removes key from both local and session storage
+			var key = storageForm.key.value;
+			localStorage.removeKey(key, value);
+			sessionStorage.removeKey(key, value);
+		}
+
+		function clearAllStorage() {
+			localStorage.clear();
+			sessionStorage.clear();
+		}
+
+		function displayAllStorage() {
+			document.write("<ul>");
+			if (sessionStorage.length <= 0) {
+				document.write("<li>sessionStorage is Empty.</li>");
+			} else {
+				document.write("<li>sessionStorage<ul>")
+				for ( var i = 0; i < sessionStorage.length; i++) {
+					var key = sessionStorage.key(i);
+					var value = sessionStorage.getItem(key);
+					document.write("<li>" + key + "=" + value + "</li>");
+				}
+				document.write("</ul></li>")
+			}
+			if (localStorage.length <= 0) {
+				document.write("<li>localStorage is Empty.</li>");
+			} else {
+				document.write("<li>localStorage<ul>")
+				for ( var i = 0; i < localStorage.length; i++) {
+					var key = localStorage.key(i);
+					var value = localStorage.getItem(key);
+					document.write("<li>" + key + "=" + value + "</li>");
+				}
+				document.write("</ul></li>")
+			}
+			document.write("<ul>");
+		}
+	</script>
+
+	<h3>Example Usages</h3>
+	<p>Getting a number from storgage:
+	<script>
+		var number = Number(localStorage.getItem("number")); // if there was no number in storage it will be a 0
+		var numberPlusOne = number + 1;
+		document.writeln(number + " + 1 is " + (number + 1));
+</script>
+</p>
+<p>Checking to see if a variable is defined:
+<script>
+		var soup = localStorage.getItem("soup");
+		if (soup != null) {
+			document.writeln("Soup is defined");
+		} else {
+			document.writeln("No soup for you. (Soup is not in storage.)");
+		}
+	</script>
+	</p>
+	<hr>
+	<h3>Variables in Storage</h3>
+	<script>
+		displayAllStorage();
+
+		document.forms["storageForm"].setKeyVal.addEventListener('click',
+				storeKeyValue);
+		document.forms["storageForm"].clear.addEventListener('click',
+				clearAllStorage);
+	</script>
+</body>
+
+</html>

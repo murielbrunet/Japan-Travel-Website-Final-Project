@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+<link rel="stylesheet" type="text/css" href="spring.css"/> 
+
+<head>
+		<script> 
+			if(sessionStorage.getItem('season') == null) {
+				document.writeln('<link rel="stylesheet" type="text/css" href="spring.css"/>');
+
+			}
+			if(sessionStorage.getItem('season') == 'spring'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="spring.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'summer'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="summer.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'fall'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="fall.css"/>');
+			}
+			if(sessionStorage.getItem('season') == 'winter'){
+				document.writeln('<link rel="stylesheet" type="text/css" href="winter.css"/>');
+			}
+
+		 </script>
+		 <title>Japan: Contact</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
+
+</head>
+<body id = "body"> 
+
+<div id = "mainText">
+			<h1> 日本へ行こう!</h1>
+			<h3> Let's go to Japan!</h3>
+
+			<nav class = "navBar">
+
+				<ul>
+					<li><a href = "index.html"> Home </a></li>
+					<li><a href = "resources.html"> Resources </a></li>
+					<li><a href = "events.html"> Events </a></li>
+					<li><a href = "contact.html" class = "selected"> Contact </a></li>
+
+				</ul>
+			</nav>
+
+			<form method="get" action="procform.html" name = "newsLetterForm" id = "newsLetterForm" action='http://cs.smith.edu/~emendelo/classes/spring14/csc105/examples/procform.html' >
+				<h2>News Letter</h2>
+				<p>
+					
+						<label for="name">Name: </label> 
+						<input name="firstName" type="text" value="John" maxlength="10" />
+						<input name="lastName" type="text" value="Smith" maxlength="10" /><br/> 
+					
+						<label for="houseNumber">House Number: </label> 
+						<input name="houseNumber" type="text" value="1234" maxlength="4" /><br/> 
+						<label for="streetName">Street Name: </label> 
+						<input name="streetName" type="text" value="Massachusetts Ave." maxlength="20" /> <br/>
+						<label for="zipCode">Zip Code: </label> 
+						<input name="zipCode" type="text" value="01234" maxlength="5" /> </br>					
+
+						<label for="state">State: </label> 
+						<select name="state">
+							<option selected="selected">(Please select)</option>
+							<option id="CT">CT</option>
+							<option id="ME">ME</option>
+							<option id="MA">MA</option>
+							<option id="RI">RI</option>
+							<option id="VT">VT</option>
+							<option id="NH">NH</option>
+						</select> </br>
+					
+						<label for="email">Email: </label> 
+						<input name="email" type="text" value="john.smith@gmail.com" maxlength="20" /><br/> 
+
+
+					<br/> 
+					<button type="submit">Submit</button>
+				</p>
+
+			</form>
+
+
+
+			<div class = "seasons">
+				<ul>
+					<li id = "spring"> Spring </a></li>
+					<li id = 'summer'> Summer </a></li>
+					<li id = 'fall'> Fall </a></li>
+					<li id = 'winter'> Winter </a></li>
+
+				</ul>
+			</div>
+
+		</div>
+			
+		<script src="javascript.js"></script>
+
+
+</body>
+
+
+</html>
